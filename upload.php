@@ -1,62 +1,23 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="node_modules/web3.js-browser/build/web3.min.js"></script>
-    <script>let web3=new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));</script>
-    <script>var contract=new
-      web3.eth.Contract([
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "newDeposite",
-				"type": "uint256"
-			}
-		],
-		"name": "deposite",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getAddress",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "getBalance",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "setAddress",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-],"0x1e25ce27bBd621b35acEFD5eb576bC80EeE06537")
-      </script>
     <meta charset="utf-8">
+    <!--Boostrap-->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!--Script JS-->
+    <script src="node_modules/web3.js-browser/build/web3.min.js"></script>
+    <script src="../node_modules/crypto-js/crypto-js.js"></script>
+	<script src="js/contract.js"></script>
+	<script src="js/upload.js"></script>
+    <!--CSS-->
+    <link href="css/upload.css" rel="stylesheet">
     <title>Ma page de test</title>
   </head>
   <header>
@@ -72,7 +33,10 @@
                         <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="connexion.html">se connecter</a>
+                        <a class="nav-link" href="connexion.php">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="upload.php">Upload</a>
                     </li>
                 
                 </ul>
@@ -81,6 +45,13 @@
     </nav>
   </header>
   <body>
-    <p>TEST DE SITE</p>
+    <div class="container">
+        <p>Upload un fichier</p>
+        <input type="file" class="form-control form-control-lg" id="formUpload">
+    </div>
+    <div class="container">
+        <button type="button" class="btn btn-secondary" onclick="hash(<?php echo $_SESSION['address'] ?>)">Submit</button>
+        <p id="uploadFile"></p>
+    </div>
   </body>
 </html>
