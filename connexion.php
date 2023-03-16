@@ -3,6 +3,7 @@
   <head>
     <script src="node_modules/web3.js-browser/build/web3.min.js"></script>
 	<script src="js/contract.js"></script>
+	<script src="js/upload.js"></script>
 	<script src="js/connexion.js"></script>
 
 
@@ -25,7 +26,7 @@
                         <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="connexion.html">Se connecter</a>
+                        <a class="nav-link" href="connexion.php">Se connecter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="upload.html">Upload</a>
@@ -38,17 +39,18 @@
   </header>
   <body>
     <div class="container">
-            <!-- zone de connexion -->
-      
+            <!-- zone de connexion --> 
         <h1>Connexion</h1>
-        
-        <label><b>Nom d'utilisateur</b></label>
-        <input id="username" type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
-      
-        <label><b>address</b></label>
-        <input id="address" type="password" placeholder="Entrer votre address de blockchienne" name="password" required>
-      
-        <input type="submit" id='submit' value='LOGIN' onclick="fungetNumber()">         
+			<form action="php/connextion.php" method="GET">
+        		<label><b>Nom d'utilisateur</b></label>
+        		<input id="username" type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+				
+        		<label><b>address</b></label>
+        		<input id="address" type="password" placeholder="Entrer votre address de blockchienne" name="address" required>
+
+        		<input type="submit" id='submit' value='LOGIN'>  
+			</form>
+            <button onclick="fungetNumber()">connexion à la blockchaine</button>
     </div>
   </body>
 </html>
