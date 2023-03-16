@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,7 +18,6 @@
 	<script src="js/upload.js"></script>
     <!--CSS-->
     <link href="css/upload.css" rel="stylesheet">
-    
     <title>Ma page de test</title>
   </head>
   <header>
@@ -31,10 +33,10 @@
                         <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="connexion.html">Se connecter</a>
+                        <a class="nav-link" href="connexion.php">Se connecter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="upload.html">Upload</a>
+                        <a class="nav-link" href="upload.php">Upload</a>
                     </li>
                 
                 </ul>
@@ -48,7 +50,7 @@
         <input type="file" class="form-control form-control-lg" id="formUpload">
     </div>
     <div class="container">
-        <button type="button" class="btn btn-secondary" onclick="hash()">Submit</button>
+        <button type="button" class="btn btn-secondary" onclick="hash(<?php echo $_SESSION['address'] ?>)">Submit</button>
         <p id="uploadFile"></p>
     </div>
   </body>

@@ -1,5 +1,5 @@
-function hash(){
-
+function hash(address){
+  console.log(address);
   var reader = new FileReader();
   var file = document.getElementById("formUpload").files[0];
 
@@ -18,7 +18,7 @@ function hash(){
 }
 async function AddToBlockchain(sha256){
   const number=await
-  contract.methods.setBlockchain("thomas",sha256,"AAAAAAAAAAAAAA").send({from: "0x51D5952F3F03B216232Bd65d117b81Ecec2b899B"})
+  contract.methods.setBlockchain("thomas",sha256,"AAAAAAAAAAAAAA").send({from: address})
   .on('transactionHash', function(hash){
 // 
   })
