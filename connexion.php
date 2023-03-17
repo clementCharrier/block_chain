@@ -5,6 +5,7 @@
 	<script src="js/contract.js"></script>
 	<script src="js/upload.js"></script>
 	<script src="js/connexion.js"></script>
+    <link href="css/connexion.css" rel="stylesheet">
 
 
     <meta charset="utf-8">
@@ -29,7 +30,7 @@
                         <a class="nav-link" href="connexion.php">Se connecter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="upload.html">Upload</a>
+                        <a class="nav-link" href="upload.php">Upload</a>
                     </li>
                 
                 </ul>
@@ -50,7 +51,7 @@
 
         		<input type="submit" id='submit' value='LOGIN'>  
 			</form>
-            <button onclick="fungetNumber()">connexion à la blockchaine</button>
+            <button id="btnBC" onclick="fungetNumber()">connexion à la blockchaine</button>
     </div>
   </body>
 </html>
