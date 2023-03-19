@@ -32,6 +32,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="upload.php">Upload</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myfile.php">My files</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="annexe.php">Annuaire</a>
+                    </li>
                 
                 </ul>
             </div>
