@@ -47,7 +47,7 @@
         		<input id="username" type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
 				
         		<label><b>address</b></label>
-        		<input id="address" type="password" placeholder="Entrer votre address de blockchienne" name="address" required>
+        		<input id="address" type="password" placeholder="Entrer votre address de blockchain" name="address" required>
 
         		<input type="submit" id='submit' value='LOGIN'>  
 			</form>
