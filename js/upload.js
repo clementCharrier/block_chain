@@ -12,13 +12,13 @@ function hash(address){
     var output = "SHA256 (" + filename + ") = " + sha256
     console.log(output);
     document.getElementById("uploadFile").innerText = output
-    AddToBlockchain(sha256);
+    AddToBlockchain("admin",sha256,"01/02",address);
   });
   reader.readAsBinaryString(document.getElementById("formUpload").files[0]);
 }
-async function AddToBlockchain(sha256){
+async function AddToBlockchain(username,sha256,date,address){
   const number=await
-  contract.methods.setBlockchain("thomas",sha256,"AAAAAAAAAAAAAA").send({from: address})
+  contract.methods.setBlockchain(username,sha256,date).send({from: address})
   .on('transactionHash', function(hash){
 // 
   })

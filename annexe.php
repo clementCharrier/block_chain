@@ -15,7 +15,7 @@ session_start();
     <script src="node_modules/web3.js-browser/build/web3.min.js"></script>
     <script src="../node_modules/crypto-js/crypto-js.js"></script>
 	<script src="js/contract.js"></script>
-	<script src="js/upload.js"></script>
+	<script src="js/getfile.js"></script>
     <!--CSS-->
     <link href="css/upload.css" rel="stylesheet">
     <title>Ma page de test</title>
@@ -44,6 +44,7 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="annexe.php">Annuaire</a>
                     </li>
+                
                 </ul>
             </div>
         </div>
@@ -51,12 +52,20 @@ session_start();
   </header>
   <body>
     <div class="container">
-        <p>Upload un fichier</p>
-        <input type="file" class="form-control form-control-lg" id="formUpload">
+        <p>Liste des utilisateurs inscrit</p>
     </div>
+    <script>getUsers(<?php echo $_SESSION['address'] ?>)</script>
     <div class="container">
-        <button type="button" class="btn btn-secondary" onclick="hash(<?php echo $_SESSION['address'] ?>)">Submit</button>
-        <p id="uploadFile"></p>
+    <table class="table" id="tableUser">
+        <thead>
+            <tr>
+                <th scope="col">Pseudonyme</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     </div>
   </body>
 </html>
