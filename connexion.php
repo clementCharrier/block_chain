@@ -29,7 +29,13 @@
                         <a class="nav-link" href="connexion.php">Se connecter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="upload.html">Upload</a>
+                        <a class="nav-link" href="upload.php">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myfile.php">My files</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="annexe.php">Annuaire</a>
                     </li>
                 
                 </ul>

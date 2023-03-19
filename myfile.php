@@ -16,6 +16,7 @@ session_start();
     <script src="../node_modules/crypto-js/crypto-js.js"></script>
 	<script src="js/contract.js"></script>
 	<script src="js/upload.js"></script>
+    <script src="js/getfile.js"></script>
     <!--CSS-->
     <link href="css/upload.css" rel="stylesheet">
     <title>Ma page de test</title>
@@ -44,19 +45,34 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="annexe.php">Annuaire</a>
                     </li>
+                
                 </ul>
             </div>
         </div>
     </nav>
   </header>
   <body>
+    <?php
+    if($_SESSION['username'] == null){
+        header('Location: ../connexion.php');
+    }
+    ?>
     <div class="container">
-        <p>Upload un fichier</p>
-        <input type="file" class="form-control form-control-lg" id="formUpload">
+        <h1>Liste de vos fichiers</h1>
     </div>
+    <script>getFile(<?php echo $_SESSION['address']?>)</script>
     <div class="container">
-        <button type="button" class="btn btn-secondary" onclick="hash(<?php echo $_SESSION['address'] ?>)">Submit</button>
-        <p id="uploadFile"></p>
+    <table class="table" id="mytable">
+        <thead>
+            <tr>
+                <th scope="col">hash</th>
+                <th scope="col">date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     </div>
   </body>
 </html>
