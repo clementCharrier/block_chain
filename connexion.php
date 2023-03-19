@@ -5,6 +5,7 @@
 	<script src="js/contract.js"></script>
 	<script src="js/upload.js"></script>
 	<script src="js/connexion.js"></script>
+    <link href="css/connexion.css" rel="stylesheet">
 
 
     <meta charset="utf-8">
@@ -52,11 +53,11 @@
         		<input id="username" type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
 				
         		<label><b>address</b></label>
-        		<input id="address" type="password" placeholder="Entrer votre address de blockchienne" name="address" required>
+        		<input id="address" type="password" placeholder="Entrer votre address de blockchain" name="address" required>
 
         		<input type="submit" id='submit' value='LOGIN'>  
 			</form>
-            <button onclick="fungetNumber()">connexion à la blockchaine</button>
+            <button id="btnBC" onclick="fungetNumber()">connexion à la blockchaine</button>
     </div>
   </body>
 </html>
