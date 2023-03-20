@@ -2,6 +2,8 @@ function hash(address){
   console.log(address);
   var reader = new FileReader();
   var file = document.getElementById("formUpload").files[0];
+  var date = document.getElementById("date");
+  var username = document.getElementById("addressDestinataire");
 
   console.log("on est dans le hash");
 
@@ -12,7 +14,7 @@ function hash(address){
     var output = "SHA256 (" + filename + ") = " + sha256
     console.log(output);
     document.getElementById("uploadFile").innerText = output
-    AddToBlockchain("admin",sha256,"01/02",address);
+    AddToBlockchain(username,sha256,date,address);
   });
   reader.readAsBinaryString(document.getElementById("formUpload").files[0]);
 }
