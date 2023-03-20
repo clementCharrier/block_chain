@@ -64,7 +64,10 @@ session_start();
     </div>
     <div class="container">
         <button type="button" class="btn btn-secondary" onclick="hash(<?php echo $_SESSION['address'] ?>)">Submit</button>
-        <p id="uploadFile"></p> 
+
+        <p id="uploadFile"></p>
+        
     </div>
+    
   </body>
 </html>
