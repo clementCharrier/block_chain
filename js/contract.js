@@ -124,4 +124,4 @@ var contract=new web3.eth.Contract(
 			"stateMutability": "view",
 			"type": "function"
 		}
-	],"0x13b738D641FfcBCe11ba6cB4a99Ec57e0Eb6443E",{gas:'6721975'})
+	],"0x7556C8E311B21d1114c9bacc08c72774E7d55982",{gas:'6721975'})

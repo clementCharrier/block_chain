@@ -18,7 +18,6 @@ session_start();
 	<script src="js/upload.js"></script>
     <script src="js/getfile.js"></script>
     <!--CSS-->
-    <link href="css/upload.css" rel="stylesheet">
     <title>Ma page de test</title>
   </head>
   <header>
